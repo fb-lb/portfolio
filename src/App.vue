@@ -6,5 +6,6 @@ import TheHeader from './components/TheHeader.vue'
   <header>
     <TheHeader/>
   </header>
+  
 </template>
 
