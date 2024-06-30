@@ -3,7 +3,7 @@
 
 <template>
     <main>
-        <a href="#"><img src="../assets/img/portfolioIcon2.png" alt="Logo d'un portfolio bleu foncé dans un cercle dont le fond est de couleur bleue claire et le contour orange"></a>
+        <a href="#"><img src="../assets/img/portfolio.png" alt="Logo d'un portfolio bleu foncé dans un cercle dont le fond est de couleur bleue claire et le contour orange"></a>
         <nav>
             <ul>
                 <li><a href="#">Présentation</a></li>
