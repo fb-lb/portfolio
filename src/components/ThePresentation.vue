@@ -2,7 +2,7 @@
 
 <template>
     <main>
-        <h1>Présentation</h1>
+        <h2>Présentation</h2>
         <div>
             <img src="../assets/img/photoPresentation.jpg" alt="Photo de présentation de Fabien Lubre à l'extérieur, homme de brun vue de face portant une paire de lunette">
         </div>
@@ -23,7 +23,7 @@ main {
     align-items: center;
 }
 
-h1 {
+h2 {
     font-family: 'Alkatra', Arial, sans-serif;
     font-size: 2rem;
 }

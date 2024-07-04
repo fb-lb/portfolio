@@ -4,16 +4,13 @@ defineProps({
   title: String,
   srcImg: String
 });
-
 </script>
 
 <template>
     <main>
-        <h1>{{title}}</h1>
-        <img :src="srcImg" alt="Image du CV">
-        
+        <h2>{{title}}</h2>
+        <img :src="srcImg" @click="$emit('openModal')" alt="Image du CV">
     </main>
-    
 </template>
 
 <style scoped>
@@ -25,7 +22,7 @@ main {
     align-items: center;
 }
 
-h1 {
+h2 {
     border-top: double 4px #F28749;
     padding-top: 25px;
     margin: 50px 0 20px 0;
@@ -39,5 +36,9 @@ img {
     width: 250px;
     height: 300px;
     object-fit:contain;
+}
+
+img:hover {
+    cursor: pointer;
 }
 </style>
