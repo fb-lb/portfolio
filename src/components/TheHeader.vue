@@ -3,7 +3,10 @@
 
 <template>
     <main>
-        <a href="#"><img src="../assets/img/portfolio.png" alt="Logo d'un portfolio bleu foncé dans un cercle dont le fond est de couleur bleue claire et le contour orange"></a>
+        <div>
+            <a href="#"><img src="../assets/img/portfolio.png" alt="Logo d'un portfolio bleu foncé dans un cercle dont le fond est de couleur bleue claire et le contour orange"></a>
+            <h1>Portfolio de Fabien Lubre</h1>
+        </div>
         <nav>
             <ul>
                 <li><a href="#">Présentation</a></li>
@@ -26,9 +29,13 @@ main {
     flex-direction: column;
 }
 
-main > a {
+main div {
+    display: flex;
+}
+
+main div > a {
     align-self: center;
-    margin: 10px 0 5px 0;
+    margin: 10px 10px 5px 10px;
     clip-path: circle(50%);
 }
 
