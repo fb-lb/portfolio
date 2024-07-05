@@ -1,9 +1,10 @@
 <script setup>
-import { ref } from 'vue'
-import TheHeader from './components/TheHeader.vue'
+import { ref } from 'vue';
+import TheHeader from './components/TheHeader.vue';
 import ThePresentation from './components/ThePresentation.vue';
 import TheProject from './components/TheProject.vue';
 import TheModal from './components/TheModal.vue';
+import ContactForm from './components/ContactForm.vue';
 
 let myCv = {
   title: "Mon CV",
@@ -28,7 +29,7 @@ let modalCv = {
   technologies: ["HTML", "CSS"],
   seeProject: "/src/assets/projects/cvLubre/index.html",
   linkGitHub: "https://github.com/fb-lb/cv_Lubre"
-}
+};
 
 let modalSocketterie = {
   title: "La Socketterie - Cahier des charges",
@@ -38,7 +39,7 @@ let modalSocketterie = {
   technologies: ["Word", "Adobe Acrobat"],
   seeProject: "/src/assets/projects/Cahier_des_charges_La_Socketterie.pdf",
   linkGitHub: "#"
-}
+};
 
 let modalDynamicComment = {
   title: "Zone de commentaire dynamique",
@@ -48,8 +49,7 @@ let modalDynamicComment = {
   technologies: ["HTML", "JavaScript"],
   seeProject: "/src/assets/projects/commentaire_dynamique/index.html",
   linkGitHub: "https://github.com/fb-lb/commentaire_dynamique"
-}
-
+};
 
 let isModalCvActive = ref(false);
 let isModalSocketterieActive = ref(false);
@@ -71,6 +71,7 @@ let isModalDynamicCommentActive = ref(false);
        <TheModal :title="modalSocketterie.title" :timeAttribute="modalSocketterie.timeAttribute" :timeText="modalSocketterie.timeText" :srcImg="modalSocketterie.srcImg" :technologies="modalSocketterie.technologies" :seeProject="modalSocketterie.seeProject" :linkGitHub="modalSocketterie.linkGitHub" v-if="isModalSocketterieActive" @close-modal="isModalSocketterieActive = false"/>
        <TheModal :title="modalDynamicComment.title" :timeAttribute="modalDynamicComment.timeAttribute" :timeText="modalDynamicComment.timeText" :srcImg="modalDynamicComment.srcImg" :technologies="modalDynamicComment.technologies" :seeProject="modalDynamicComment.seeProject" :linkGitHub="modalDynamicComment.linkGitHub" v-if="isModalDynamicCommentActive" @close-modal="isModalDynamicCommentActive = false"/>
     </teleport>
+    <ContactForm/>
   </main>
 
 </template>
