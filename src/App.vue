@@ -5,6 +5,7 @@ import ThePresentation from './components/ThePresentation.vue';
 import TheProject from './components/TheProject.vue';
 import TheModal from './components/TheModal.vue';
 import ContactForm from './components/ContactForm.vue';
+import TheFooter from './components/TheFooter.vue';
 
 let myCv = {
   title: "Mon CV",
@@ -73,7 +74,9 @@ let isModalDynamicCommentActive = ref(false);
     </teleport>
     <ContactForm/>
   </main>
-
+  <footer>
+    <TheFooter/>
+  </footer>
 </template>
 
 <style>
