@@ -1,5 +1,6 @@
 <script setup>
 import { ref } from 'vue';
+import { reactive } from 'vue';
 import TheHeader from './components/TheHeader.vue';
 import ThePresentation from './components/ThePresentation.vue';
 import TheProject from './components/TheProject.vue';
@@ -32,38 +33,44 @@ let dynamicComment = {
   openModal: ()=>{isModalDynamicCommentActive.value = true}
 };
 
-let modalCv = {
+let modalCv = reactive({
   title: "Mon CV",
   timeAttribute: "2024-04-21",
   timeText: "21/04/2024",
   srcImg: "/src/assets/img/imageCv.jpg",
   technologies: ["HTML", "CSS"],
   seeProject: "/src/assets/projects/cvLubre/index.html",
-  linkGitHub: "https://github.com/fb-lb/cv_Lubre"
-};
+  linkGitHub: "https://github.com/fb-lb/cv_Lubre",
+  activeModal: isModalCvActive,
+  close: ()=>{isModalCvActive.value = false}
+});
 
-let modalSocketterie = {
+let modalSocketterie = reactive({
   title: "La Socketterie - Cahier des charges",
   timeAttribute: "2024-05-23",
   timeText: "23/05/2024",
   srcImg: "/src/assets/img/logoSocketterie.jpg",
   technologies: ["Word", "Adobe Acrobat"],
   seeProject: "/src/assets/projects/Cahier_des_charges_La_Socketterie.pdf",
-  linkGitHub: "#"
-};
+  linkGitHub: "#",
+  activeModal: isModalSocketterieActive,
+  close: ()=>{isModalSocketterieActive.value = false}
+});
 
-let modalDynamicComment = {
+let modalDynamicComment = reactive({
   title: "Zone de commentaire dynamique",
   timeAttribute: "2024-06-12",
   timeText: "12/06/2024",
   srcImg: "/src/assets/img/commentairesDynamiques.jpg",
   technologies: ["HTML", "JavaScript"],
   seeProject: "/src/assets/projects/commentaire_dynamique/index.html",
-  linkGitHub: "https://github.com/fb-lb/commentaire_dynamique"
-};
+  linkGitHub: "https://github.com/fb-lb/commentaire_dynamique",
+  activeModal: isModalDynamicCommentActive,
+  close: ()=>{isModalDynamicCommentActive.value = false}
+});
 
 let projectList = [myCv, theSocketterie, dynamicComment];
-
+let modalList = [modalCv, modalSocketterie, modalDynamicComment];
 </script>
 
 <template>
@@ -78,10 +85,17 @@ let projectList = [myCv, theSocketterie, dynamicComment];
       :id="project.id"
       @open-modal="project.openModal"
       class="scroll"/>
-    <teleport to=#modals>
-       <TheModal :title="modalCv.title" :timeAttribute="modalCv.timeAttribute" :timeText="modalCv.timeText" :srcImg="modalCv.srcImg" :technologies="modalCv.technologies" :seeProject="modalCv.seeProject" :linkGitHub="modalCv.linkGitHub" v-if="isModalCvActive" @close-modal="isModalCvActive = false"/>
-       <TheModal :title="modalSocketterie.title" :timeAttribute="modalSocketterie.timeAttribute" :timeText="modalSocketterie.timeText" :srcImg="modalSocketterie.srcImg" :technologies="modalSocketterie.technologies" :seeProject="modalSocketterie.seeProject" :linkGitHub="modalSocketterie.linkGitHub" v-if="isModalSocketterieActive" @close-modal="isModalSocketterieActive = false"/>
-       <TheModal :title="modalDynamicComment.title" :timeAttribute="modalDynamicComment.timeAttribute" :timeText="modalDynamicComment.timeText" :srcImg="modalDynamicComment.srcImg" :technologies="modalDynamicComment.technologies" :seeProject="modalDynamicComment.seeProject" :linkGitHub="modalDynamicComment.linkGitHub" v-if="isModalDynamicCommentActive" @close-modal="isModalDynamicCommentActive = false"/>
+    <teleport to=#modals v-for="modal in modalList">
+      <TheModal 
+        v-if="modal.activeModal"
+        :title="modal.title"
+        :timeAttribute="modal.timeAttribute"
+        :timeText="modal.timeText"
+        :srcImg="modal.srcImg"
+        :technologies="modal.technologies"
+        :seeProject="modal.seeProject"
+        :linkGitHub="modal.linkGitHub"
+        @close-modal="modal.close"/>
     </teleport>
     <ContactForm class="scroll"/>
   </main>
@@ -89,6 +103,13 @@ let projectList = [myCv, theSocketterie, dynamicComment];
     <TheFooter/>
   </footer>
 </template>
+
+<style scoped>
+header {
+  position: sticky;
+  top: 0px;
+}
+</style>
 
 <style>
 :root {
@@ -99,16 +120,7 @@ let projectList = [myCv, theSocketterie, dynamicComment];
   scroll-behavior: smooth;
 }
 
-main {
-  background-color: rgb(219, 234, 239);
-}
-
 .scroll {
   scroll-margin-top: calc(var(--header-height) - 30px);
-}
-
-header {
-  position: sticky;
-  top: 0px;
 }
 </style>

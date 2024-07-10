@@ -12,9 +12,9 @@ defineProps({
 </script>
 
 <template>
-    <div class="bloc-modal">
+    <main>
         <div class="overlay" @click="$emit('closeModal')"></div>
-        <main>
+        <div class="bloc-modal">
             <button type="button" @click="$emit('closeModal')">X</button>
             <h2>{{title}}</h2>
             <time :datetime="timeAttribute">{{timeText}}</time>
@@ -30,14 +30,14 @@ defineProps({
                 <a :href="linkGitHub" target="_blank" v-if="linkGitHub != '#'">Se rendre au dépôt GitHub</a>
                 <div v-if="linkGitHub == '#'"></div>
             </div>
-        </main>
-    </div>
+        </div>
+    </main>
 </template>
 
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@400..700&display=swap');
 
-.bloc-modal {
+main {
     position: fixed;
     top: 0;
     bottom: 0;
@@ -47,10 +47,10 @@ defineProps({
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background: rgba(0,0,0,0.5);
 }
 
 .overlay {
-    background: rgba(0,0,0,0.5);
     position: fixed;
     top: 0;
     bottom: 0;
@@ -59,15 +59,16 @@ defineProps({
     margin: 0;
 }
 
-main {
+.bloc-modal {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 600px;
     border: 1px solid #F6994B;
-    z-index: 10;
+    z-index: 2;
     border-radius: 10px;
     box-shadow: 0 0 1.2rem #F6994B, 0 0 0.2rem #F6994B, 0 0 0.5rem #F6994B;
+    background-color: rgb(219, 234, 239);
 }
 
 button {
@@ -120,7 +121,7 @@ p {
     text-decoration: underline;
 }
 
-main>div {
+.bloc-modal>div {
     display: flex;
     justify-content: center;
     width: 100%;
@@ -140,7 +141,7 @@ a:hover {
     text-decoration: underline;
 }
 
-main div div {
+.bloc-modal div div {
     width: 176px;
 }
 </style>
