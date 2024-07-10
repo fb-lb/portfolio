@@ -33,9 +33,10 @@ h2 {
 }
 
 img {
-    width: 250px;
-    height: 300px;
-    object-fit:contain;
+    width: auto;
+    height: auto;
+    max-width: 250px;
+    max-height: 300px;
 }
 
 img:hover {
