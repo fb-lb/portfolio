@@ -31,7 +31,7 @@ onMounted(()=>{
 </script>
 
 <template>
-    <main>
+    <main id="contactForm">
         <h2>Contact</h2>
         <form :action="actionForm" method="post">
             <div>
@@ -72,7 +72,7 @@ form {
 
 h2 {
     font-family: 'Alkatra', Arial, sans-serif;
-    font-size: 2rem;
+    font-size: 1.7rem;
     border-top: double 4px #F28749;
     padding-top: 25px;
     margin: 50px 0 20px 0;

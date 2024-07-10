@@ -1,7 +1,7 @@
 <script setup></script>
 
 <template>
-    <main>
+    <main id="thePresentation">
         <h2>Présentation</h2>
         <div>
             <img src="../assets/img/photoPresentation.jpg" alt="Photo de présentation de Fabien Lubre à l'extérieur, homme de brun vue de face portant une paire de lunette">
@@ -25,7 +25,7 @@ main {
 
 h2 {
     font-family: 'Alkatra', Arial, sans-serif;
-    font-size: 2rem;
+    font-size: 1.7rem;
 }
 
 img {
@@ -37,7 +37,7 @@ img {
 }
 
 p {
-    width: 50%;
+    width: 55%;
     text-align: center;
     font-family: 'Sriracha','Alkatra', Arial, sans-serif;
     font-size: 1rem;

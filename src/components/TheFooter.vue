@@ -7,7 +7,7 @@
             <a href="https://github.com/fb-lb" target="_blank"><img class="icons__github" src="/src/assets/img/socialNetworkIcons.png" alt=""></a>
             <a href="https://www.facebook.com/fabien.lubre" target="_blank"><img class="icons__facebook" src="/src/assets/img/socialNetworkIcons.png" alt=""></a>
         </div>
-        <small>Dernière mise à jour le <time datetime="2024-07-05">05/07/2024</time></small>
+        <small>Dernière mise à jour le <time datetime="2024-07-10">10/07/2024</time></small>
     </main>
 </template>
 
