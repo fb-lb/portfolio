@@ -63,16 +63,16 @@ let isModalDynamicCommentActive = ref(false);
     <TheHeader/>
   </header>
   <main>
-    <ThePresentation/>
-    <TheProject :title="myCv.title" :srcImg="myCv.srcImg" @open-modal="isModalCvActive = true"/>
-    <TheProject :title="theSocketterie.title" :srcImg="theSocketterie.srcImg" @open-modal="isModalSocketterieActive = true"/>
-    <TheProject :title="dynamicComment.title" :srcImg="dynamicComment.srcImg" @open-modal="isModalDynamicCommentActive = true"/>
+    <ThePresentation class="scroll"/>
+    <TheProject :title="myCv.title" :srcImg="myCv.srcImg" @open-modal="isModalCvActive = true" id="myCv" class="scroll"/>
+    <TheProject :title="theSocketterie.title" :srcImg="theSocketterie.srcImg" @open-modal="isModalSocketterieActive = true" id="theSocketterie" class="scroll"/>
+    <TheProject :title="dynamicComment.title" :srcImg="dynamicComment.srcImg" @open-modal="isModalDynamicCommentActive = true" id="dynamicComment" class="scroll"/>
     <teleport to=#modals>
        <TheModal :title="modalCv.title" :timeAttribute="modalCv.timeAttribute" :timeText="modalCv.timeText" :srcImg="modalCv.srcImg" :technologies="modalCv.technologies" :seeProject="modalCv.seeProject" :linkGitHub="modalCv.linkGitHub" v-if="isModalCvActive" @close-modal="isModalCvActive = false"/>
        <TheModal :title="modalSocketterie.title" :timeAttribute="modalSocketterie.timeAttribute" :timeText="modalSocketterie.timeText" :srcImg="modalSocketterie.srcImg" :technologies="modalSocketterie.technologies" :seeProject="modalSocketterie.seeProject" :linkGitHub="modalSocketterie.linkGitHub" v-if="isModalSocketterieActive" @close-modal="isModalSocketterieActive = false"/>
        <TheModal :title="modalDynamicComment.title" :timeAttribute="modalDynamicComment.timeAttribute" :timeText="modalDynamicComment.timeText" :srcImg="modalDynamicComment.srcImg" :technologies="modalDynamicComment.technologies" :seeProject="modalDynamicComment.seeProject" :linkGitHub="modalDynamicComment.linkGitHub" v-if="isModalDynamicCommentActive" @close-modal="isModalDynamicCommentActive = false"/>
     </teleport>
-    <ContactForm/>
+    <ContactForm class="scroll"/>
   </main>
   <footer>
     <TheFooter/>
@@ -80,7 +80,24 @@ let isModalDynamicCommentActive = ref(false);
 </template>
 
 <style>
+:root {
+  --header-height: 113px;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
 main {
   background-color: rgb(219, 234, 239);
+}
+
+.scroll {
+  scroll-margin-top: calc(var(--header-height) - 30px);
+}
+
+header {
+  position: sticky;
+  top: 0px;
 }
 </style>

@@ -26,7 +26,7 @@ h2 {
     padding-top: 25px;
     margin: 50px 0 20px 0;
     font-family: 'Alkatra', Arial, sans-serif;
-    font-size: 2rem;
+    font-size: 1.7rem;
     width: 50%;
     text-align: center;
 }

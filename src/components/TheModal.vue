@@ -86,7 +86,7 @@ button:hover {
 h2 {
     margin: 0;
     font-family: 'Alkatra', Arial, sans-serif;
-    font-size: 2rem;
+    font-size: 1.7rem;
 }
 
 time {
