@@ -20,7 +20,6 @@ function activeLink(link) {
     switch (link) {
         case "activeThePresentation" :
             isThePresentationActive.value=true;
-            console.log(isThePresentationActive.value);
             break;
         case "activeMyCv" :
             isMyCvActive.value=true;
@@ -39,34 +38,34 @@ function activeLink(link) {
 </script>
 
 
-<template>
-    <main>
-        <a href="#" @click="noActiveLink()"><img src="../assets/img/portfolio.png" alt="Logo d'un portfolio bleu foncé dans un cercle dont le fond est de couleur bleue claire et le contour orange"></a>
+<template >
+    <div class="header">
+        <a href="/#" @click="noActiveLink()"><img src="../assets/img/portfolio.png" alt="Logo d'un portfolio bleu foncé dans un cercle dont le fond est de couleur bleue claire et le contour orange"></a>
         <div>      
             <h1>Portfolio de Fabien Lubre</h1>
             <nav>
                 <ul>
-                    <li><a href="#thePresentation" :class="{active: isThePresentationActive}" @click="activeLink('activeThePresentation')">Présentation</a></li>
-                    <li><a href="#myCv" :class="{active: isMyCvActive}" @click="activeLink('activeMyCv')">CV</a></li>
-                    <li><a href="#theSocketterie" :class="{active: isTheSocketterieActive}" @click="activeLink('activeTheSocketterie')">La Socketterie - Cahier des charges</a></li>
-                    <li><a href="#dynamicComment" :class="{active: isDynamicCommentActive}" @click="activeLink('activeDynamicComment')">Zone de commentaire dynamique</a></li>
-                    <li><a href="#contactForm" :class="{active: isContactFormActive}" @click="activeLink('activeContactForm')">Contact</a></li>
+                    <li><a href="/#presentation" :class="{active: isThePresentationActive}" @click="activeLink('activeThePresentation')">Présentation</a></li>
+                    <li><a href="/#myCv" :class="{active: isMyCvActive}" @click="activeLink('activeMyCv')">CV</a></li>
+                    <li><a href="/#theSocketterie" :class="{active: isTheSocketterieActive}" @click="activeLink('activeTheSocketterie')">La Socketterie - Cahier des charges</a></li>
+                    <li><a href="/#dynamicComment" :class="{active: isDynamicCommentActive}" @click="activeLink('activeDynamicComment')">Zone de commentaire dynamique</a></li>
+                    <li><a href="/#contactForm" :class="{active: isContactFormActive}" @click="activeLink('activeContactForm')">Contact</a></li>
                 </ul>
             </nav>
         </div>
-    </main>
+    </div>
 </template>
 
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@400..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
 
-main {
+.header {
     background-color: lightblue;
     display: flex;
 }
 
-main > a {
+.header > a {
     align-self: center;
     margin: 10px 10px 5px 10px;
     clip-path: circle(50%);
@@ -76,7 +75,7 @@ img {
     width: 90px; 
 }
 
-main div {
+.header div {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -123,5 +122,4 @@ ul li a {
 ul li a:hover {
     text-shadow: 0 0 0.2rem #F28749, 0 0 1rem #F28749;
 }
-
 </style>
