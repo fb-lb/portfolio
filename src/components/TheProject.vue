@@ -6,16 +6,16 @@ defineProps({
 </script>
 
 <template>
-    <main>
+    <div class="project">
         <h2>{{title}}</h2>
         <img :src="srcImg" @click="$emit('openModal')" alt="Image du CV">
-    </main>
+    </div>
 </template>
 
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@400..700&display=swap');
 
-main {
+.project {
     display: flex;
     flex-direction:column;
     align-items: center;

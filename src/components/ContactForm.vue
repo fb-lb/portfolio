@@ -31,7 +31,7 @@ onMounted(()=>{
 </script>
 
 <template>
-    <main id="contactForm">
+    <div id="contactForm">
         <h2>Contact</h2>
         <form :action="actionForm" method="post">
             <div>
@@ -51,18 +51,20 @@ onMounted(()=>{
             <p v-if="isErrorTextVisible">Merci de bien vouloir remplir tous les champs</p>
             <button type="submit">Envoyer</button>
         </form>
-    </main>    
+    </div>    
 </template>
 
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@400..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
 
-main {
+#contactForm {
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: rgb(219, 234, 239);
+    width: 100%;
+    margin: 0;
 }
 
 form {

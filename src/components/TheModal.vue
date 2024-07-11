@@ -12,7 +12,7 @@ defineProps({
 </script>
 
 <template>
-    <main>
+    <div class="modal">
         <div class="overlay" @click="$emit('closeModal')"></div>
         <div class="bloc-modal">
             <button type="button" @click="$emit('closeModal')">X</button>
@@ -31,13 +31,13 @@ defineProps({
                 <div v-if="linkGitHub == '#'"></div>
             </div>
         </div>
-    </main>
+    </div>
 </template>
 
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@400..700&display=swap');
 
-main {
+.modal {
     position: fixed;
     top: 0;
     bottom: 0;
