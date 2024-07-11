@@ -41,5 +41,6 @@ img {
 
 img:hover {
     cursor: pointer;
+    box-shadow: 7px 7px 0.2rem #F6994B, 7px 7px 0.7rem #F6994B;
 }
 </style>
