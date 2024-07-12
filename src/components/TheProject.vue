@@ -7,14 +7,14 @@ defineProps({
 </script>
 
 <template>
-    <div class="project">
+    <div>
         <h2>{{title}}</h2>
         <img :src="srcImg" @click="$emit('openModal')" :alt="altImg">
     </div>
 </template>
 
 <style scoped>
-.project {
+div {
     display: flex;
     flex-direction:column;
     align-items: center;

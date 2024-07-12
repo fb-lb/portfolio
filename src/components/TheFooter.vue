@@ -12,7 +12,7 @@
 </template>
 
 <style scoped>
-.footer {
+.footer{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -21,7 +21,7 @@
     margin: 0;
 }
 
-div {
+div div {
     display: flex;
     gap: 20px;
     margin: 20px 0;
