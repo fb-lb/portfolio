@@ -7,14 +7,7 @@ let isTheSocketterieActive = ref(false);
 let isDynamicCommentActive = ref(false);
 let isContactFormActive = ref(false);
 
-function noActiveLink() {
-    isThePresentationActive.value = false;
-    isMyCvActive.value = false;
-    isTheSocketterieActive.value = false;
-    isDynamicCommentActive.value = false;
-    isContactFormActive.value = false;
-}
-
+// Remove "active" class on all link elements and add it just to the link we have just clic on
 function activeLink(link) {
     noActiveLink();
     switch (link) {
@@ -34,6 +27,14 @@ function activeLink(link) {
             isContactFormActive.value=true;
             break;
     }
+}
+
+function noActiveLink() {
+    isThePresentationActive.value = false;
+    isMyCvActive.value = false;
+    isTheSocketterieActive.value = false;
+    isDynamicCommentActive.value = false;
+    isContactFormActive.value = false;
 }
 </script>
 

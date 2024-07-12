@@ -3,9 +3,9 @@
 <template>
     <div class="footer">
         <div>
-            <a href="https://fr.linkedin.com/" target="_blank"><img  class="icons__linkedin" src="/src/assets/img/socialNetworkIcons.png" alt=""></a>
-            <a href="https://github.com/fb-lb" target="_blank"><img class="icons__github" src="/src/assets/img/socialNetworkIcons.png" alt=""></a>
-            <a href="https://www.facebook.com/fabien.lubre" target="_blank"><img class="icons__facebook" src="/src/assets/img/socialNetworkIcons.png" alt=""></a>
+            <a href="https://fr.linkedin.com/" target="_blank"><img  class="icons__linkedin" src="/src/assets/img/socialNetworkIcons.png" alt="Icône de Linkedin"></a>
+            <a href="https://github.com/fb-lb" target="_blank"><img class="icons__github" src="/src/assets/img/socialNetworkIcons.png" alt="Icône de GitHub"></a>
+            <a href="https://www.facebook.com/fabien.lubre" target="_blank"><img class="icons__facebook" src="/src/assets/img/socialNetworkIcons.png" alt="Icône de Facebook"></a>
         </div>
         <small>Mis à jour le <time datetime="2024-07-11">11/07/2024</time></small>
     </div>
