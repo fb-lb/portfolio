@@ -56,7 +56,7 @@ onMounted(()=>{
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: rgb(219, 234, 239);
+    background-color: rgb(204, 214, 223);
     width: 100%;
     margin: 0;
 }
@@ -70,7 +70,7 @@ form {
 h2 {
     font-family: 'Alkatra', Arial, sans-serif;
     font-size: 1.7rem;
-    border-top: double 4px #F28749;
+    border-top: double 4px rgb(235, 143, 67);
     padding-top: 25px;
     margin: 50px 0 20px 0;
     width: 50%;
