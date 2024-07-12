@@ -26,6 +26,9 @@ header {
 </style>
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+
 :root {
   --header-height: 113px;
 }

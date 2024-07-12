@@ -12,8 +12,6 @@
 </template>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
-
 .footer {
     display: flex;
     flex-direction: column;

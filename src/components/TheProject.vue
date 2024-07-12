@@ -14,8 +14,6 @@ defineProps({
 </template>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@400..700&display=swap');
-
 .project {
     display: flex;
     flex-direction:column;

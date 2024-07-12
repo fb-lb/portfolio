@@ -58,9 +58,6 @@ function noActiveLink() {
 </template>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@400..700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
-
 .header {
     background-color: rgb(164, 205, 219);
     display: flex;

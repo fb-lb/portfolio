@@ -10,8 +10,6 @@
 </template>
   
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@400..700&display=swap');
-
 .errorPage {
   background-color: rgb(204, 214, 223);
   padding-top: 20px;

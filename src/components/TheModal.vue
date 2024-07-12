@@ -36,8 +36,6 @@ defineProps({
 </template>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@400..700&display=swap');
-
 .modal {
     position: fixed;
     top: 0;
