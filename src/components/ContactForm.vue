@@ -7,16 +7,14 @@ let actionForm = ref('');
 
 onMounted(()=>{
     let form = document.querySelector("form");
-    let lastName = document.getElementById("lastName");
-    let firstName = document.getElementById("firstName");
+    let fullName = document.getElementById("fullName");
     let subject = document.getElementById("subject");
     let message = document.getElementById("message");
     
     form.onsubmit = (event)=>{
         // Checking validity of the fields on submission
-        if (lastName.value.trim() == "" || firstName.value.trim() == "" ||  subject.value.trim() == "" || message.value.trim() == "") {
-            lastName.value = lastName.value.trim();
-            firstName.value = firstName.value.trim();
+        if (fullName.value.trim() == "" || subject.value.trim() == "" || message.value.trim() == "") {
+            fullName.value = fullName.value.trim();
             subject.value = subject.value.trim();
             message.value = message.value.trim();
             isErrorTextVisible.value = true;
@@ -35,12 +33,8 @@ onMounted(()=>{
         <h2>Contact</h2>
         <form :action="actionForm" method="post">
             <div>
-                <label for="lastName">Nom</label>
-                <input type="text" name="lastName" id="lastName">
-            </div>
-            <div>
-                <label for="firstName">Prénom</label>
-                <input type="text" name="firstName" id="firstName">
+                <label for="fullName">Nom Prénom</label>
+                <input type="text" name="fullName" id="fullName">
             </div>
             <div>
                 <label for="subject">Objet du mail</label>
