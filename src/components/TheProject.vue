@@ -1,14 +1,15 @@
 <script setup>
 defineProps({
   title: String,
-  srcImg: String
+  srcImg: String,
+  altImg: String
 });
 </script>
 
 <template>
     <div class="project">
         <h2>{{title}}</h2>
-        <img :src="srcImg" @click="$emit('openModal')" alt="Image du CV">
+        <img :src="srcImg" @click="$emit('openModal')" :alt="altImg">
     </div>
 </template>
 

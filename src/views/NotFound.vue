@@ -2,7 +2,7 @@
 
 <template>
     <div class="errorPage">
-      <img src="/src/assets/img//erreurPage.png" alt="">
+      <img src="/src/assets/img//erreurPage.png" alt="Dessin orange des contours d'un ordinateur. L'écran fait office de visage avec des croix oranges à la place des yeux et une bouche orange en forme de vaguelette.">
       <p>404</p>
       <p>Oops ! Cette page est introuvable</p>
       <a href="/">Retour à la page d'accueil</a>

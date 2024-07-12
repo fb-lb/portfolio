@@ -4,6 +4,7 @@ defineProps({
     timeAttribute: String,
     timeText: String,
     srcImg: String,
+    altImg: String,
     technologies: Array,
     seeProject: String,
     linkGitHub: String
@@ -18,7 +19,7 @@ defineProps({
             <button type="button" @click="$emit('closeModal')">X</button>
             <h2>{{title}}</h2>
             <time :datetime="timeAttribute">{{timeText}}</time>
-            <img :src="srcImg" alt="Image représentant le projet">
+            <img :src="srcImg" :alt="altImg">
             <p>Technologies utilisées :</p>
             <ul>
                 <li v-for="n in technologies.length">
