@@ -3,28 +3,51 @@ import { ref } from 'vue';
 import { onMounted } from 'vue';
 
 let isErrorTextVisible = ref(false);
-let actionForm = ref('');
+let errorMessage = ref("");
 let mail = import.meta.env.VITE_EMAIL;
+
+let fullName = ref("");
+let email = ref("");
+let subject = ref("");
+let message = ref("");
 
 onMounted(()=>{
     let form = document.querySelector("form");
-    let fullName = document.getElementById("fullName");
-    let subject = document.getElementById("subject");
-    let message = document.getElementById("message");
     
     form.onsubmit = (event)=>{
         // Checking validity of the fields on submission
-        if (fullName.value.trim() == "" || subject.value.trim() == "" || message.value.trim() == "") {
+        if (fullName.value.trim() == "" || email.value.trim() == "" || subject.value.trim() == "" || message.value.trim() == "") {
             fullName.value = fullName.value.trim();
+            email.value = email.value.trim();
             subject.value = subject.value.trim();
             message.value = message.value.trim();
             isErrorTextVisible.value = true;
+            errorMessage.value = "Merci de bien vouloir remplir tous les champs";
+            event.preventDefault();
+        } else if (!email.value.includes('@')) {
+            isErrorTextVisible.value = true;
+            errorMessage.value = "L'E-mail doit contenir le caractère '@'";
+            event.preventDefault();
+        } else if (email.value.startsWith('@')) {
+            isErrorTextVisible.value = true;
+            errorMessage.value = "L'E-mail doit contenir une partie précédent le caractère '@'";
+            event.preventDefault();
+        } else if (email.value.endsWith('@')) {
+            isErrorTextVisible.value = true;
+            errorMessage.value = "L'E-mail doit contenir une partie suivant le caractère '@'";
+            event.preventDefault();
+        } else if (email.value.indexOf('@') != email.value.lastIndexOf('@')) {
+            isErrorTextVisible.value = true;
+            errorMessage.value = "L'E-mail doit contenir un seul caractère '@'";
             event.preventDefault();
         } else {
             isErrorTextVisible.value = false;
-            actionForm.value = "mailto:" + mail + "?subject=" + document.getElementById('subject').value + "&body=" + document.getElementById('message').value;
-            form.reset(); 
-            alert("Merci, votre mail a bien été envoyé à " + mail);  
+            fullName.value = "";
+            email.value = "";
+            subject.value = "";
+            message.value = "";
+            alert("Merci, votre mail a bien été envoyé à " + mail);
+            return false;
         };
     };
 });
@@ -33,18 +56,22 @@ onMounted(()=>{
 <template>
     <div id="contactForm">
         <h2>Contact</h2>
-        <form :action="actionForm" method="post">
+        <form action="#" method="post">
             <div>
                 <label for="fullName">Nom Prénom</label>
-                <input type="text" name="fullName" id="fullName">
+                <input type="text" name="fullName" id="fullName" v-model="fullName">
+            </div>
+            <div>
+                <label for="email">E-mail</label>
+                <input type="email" name="email" id="email" v-model="email">
             </div>
             <div>
                 <label for="subject">Objet du mail</label>
-                <input type="text" name="subject" id="subject">
+                <input type="text" name="subject" id="subject" v-model="subject">
             </div>
-            <textarea name="message" id="message" rows="7" cols="60" placeholder="Votre message" maxlength="1000"></textarea>
+            <textarea name="message" id="message" rows="7" cols="60" placeholder="Votre message" maxlength="1000" v-model="message"></textarea>
             <small>Maximum : 1 000 caractères</small>
-            <p v-if="isErrorTextVisible">Merci de bien vouloir remplir tous les champs</p>
+            <p v-if="isErrorTextVisible">{{errorMessage}}</p>
             <button type="submit">Envoyer</button>
         </form>
     </div>    
