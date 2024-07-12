@@ -68,7 +68,7 @@ defineProps({
     z-index: 2;
     border-radius: 10px;
     box-shadow: 0 0 1.2rem #F6994B, 0 0 0.2rem #F6994B, 0 0 0.5rem #F6994B;
-    background-color: rgb(219, 234, 239);
+    background-color: rgb(204, 214, 223);
 }
 
 button {

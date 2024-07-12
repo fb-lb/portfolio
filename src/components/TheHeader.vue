@@ -61,7 +61,7 @@ function activeLink(link) {
 @import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
 
 .header {
-    background-color: lightblue;
+    background-color: rgb(164, 205, 219);
     display: flex;
 }
 
@@ -91,7 +91,7 @@ h1 {
 }
 
 nav {
-    background-color: #9ABBD9;
+    background-color: rgb(146, 176, 197);
 }
 
 ul {

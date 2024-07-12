@@ -20,7 +20,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: rgb(219, 234, 239);
+    background-color: rgb(204, 214, 223);
 }
 
 h2 {

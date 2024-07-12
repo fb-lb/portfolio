@@ -18,8 +18,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: lightblue;
-    border-top: 5px solid #9ABBD9;
+    background-color: rgb(164, 205, 219);
+    border-top: 5px solid rgb(146, 176, 197);
     margin: 0;
 }
 
@@ -48,7 +48,7 @@ img {
 }
 
 .icons__linkedin:hover {
-    background-color: #F6994B;
+    background-color: rgb(247, 150, 70);
 }
 
 .icons__github {

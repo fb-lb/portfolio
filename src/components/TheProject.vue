@@ -19,11 +19,11 @@ defineProps({
     display: flex;
     flex-direction:column;
     align-items: center;
-    background-color: rgb(219, 234, 239);
+    background-color: rgb(204, 214, 223);
 }
 
 h2 {
-    border-top: double 4px #F28749;
+    border-top: double 4px rgb(247, 150, 70);
     padding-top: 25px;
     margin: 50px 0 20px 0;
     font-family: 'Alkatra', Arial, sans-serif;
@@ -41,6 +41,6 @@ img {
 
 img:hover {
     cursor: pointer;
-    box-shadow: 7px 7px 0.2rem #F6994B, 7px 7px 0.7rem #F6994B;
+    box-shadow: 7px 7px 0.2rem rgb(247, 150, 70), 7px 7px 0.7rem rgb(247, 150, 70);
 }
 </style>
