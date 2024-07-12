@@ -4,6 +4,7 @@ import { onMounted } from 'vue';
 
 let isErrorTextVisible = ref(false);
 let actionForm = ref('');
+let mail = import.meta.env.VITE_EMAIL;
 
 onMounted(()=>{
     let form = document.querySelector("form");
@@ -21,8 +22,9 @@ onMounted(()=>{
             event.preventDefault();
         } else {
             isErrorTextVisible.value = false;
-            actionForm.value = "mailto:fb.lubre@free.fr?subject=" + document.getElementById('subject').value + "&body=" + document.getElementById('message').value;
-            form.reset();   
+            actionForm.value = "mailto:" + mail + "?subject=" + document.getElementById('subject').value + "&body=" + document.getElementById('message').value;
+            form.reset(); 
+            alert("Merci, votre mail a bien été envoyé à " + mail);  
         };
     };
 });
