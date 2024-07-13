@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+@font-face {
+    font-family: "Raleway";
+    src: url('../fonts/Raleway.woff');
+    src: url('../fonts/Raleway.otf') format('opentype');
+    src: url('../fonts/Raleway.ttf') format('truetype');
+}
+
+body {
+    display: flex;
+    justify-content: center;
+}
+
+#cv {
+    width: 1160px;
+}
+
+h1 {
+    font-family: "Lato", Arial, sans-serif;
+    font-size: 1.3rem;
+    margin: 0;
+    font-weight: bold;
+}
+
+h2 {
+    font-family: "Lato", Arial, sans-serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+    background-color: #dbc2a4;
+    padding: 4px 0;
+}
+
+h3 {
+    font-family: "Lato", Arial, sans-serif;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+p {
+    font-family: "Raleway", Arial, sans-serif;
+    font-size: 1rem;
+}
+
+li {
+    font-family: "Raleway", Arial, sans-serif;
+    font-size: 1rem;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+#profil {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #782221;
+    padding: 50px 0;
+}
+
+#profil img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 0 15px 0 goldenrod;
+}
+
+#profil img:hover {
+    cursor:zoom-in;
+}
+
+#profil a:hover {
+    cursor:default;
+}
+
+#name {
+    text-transform:uppercase;
+    font-family: "Lato", Arial, sans-serif;
+    font-size: 1.6rem;
+    margin: 35px 0 33px;
+    font-weight: bold;
+}
+
+address {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    background-color: #2c1d27;
+}
+
+address a {
+    color: white;
+    text-decoration: none;
+}
+
+address a:hover {
+    text-decoration: underline;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    border-right: solid 2px black;
+    box-sizing: border-box;
+}
+
+#softSkills {
+    box-sizing: border-box;
+    width:30%;
+    padding-right: 50px;
+    background-color: #782221;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+#softSkills p {
+    color: white;
+}
+
+#softSkills li {
+    color: white;
+}
+
+#softSkills h2 {
+    text-indent: 20px;
+}
+
+#aboutText {
+    text-align:justify;
+    text-indent: 30px;
+    padding-left: 20px;
+}
+
+#softSkills ul {
+    padding-left: 40px;
+}
+
+#hardSkills {
+    box-sizing:border-box;
+    width: 70%;
+    padding: 0 20px 0 35px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+#hardSkills h2 {
+    border-left: solid 7px #782221;
+    text-indent: 7px;
+}
+
+#hardSkills section section:hover {
+    border-right: solid 5px #782221;
+}
+
+#professionalSkills ul:hover {
+    border-right: solid 5px #782221;
+}
+
+footer {
+    background-color: #782221;
+    color: white;
+    box-sizing: border-box;
+    padding: 20px 0 20px 0;
+}
+
+#icons {
+    height: 40px;
+    display: flex;
+    column-gap: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+#icons img:hover {
+    opacity: 75%;
+}
+
+footer img {
+    height: 40px;
+    width: 40px;
+    border-radius: 15%;
+}
+
+footer p{
+    margin: 25px 0 0 0;
+    display: flex;
+    justify-content: center;
+}
