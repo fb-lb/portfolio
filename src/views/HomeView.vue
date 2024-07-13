@@ -109,4 +109,7 @@ let modalList = [modalCv, modalSocketterie, modalDynamicComment];
 </template>
 
 <style scoped>
+.scroll {
+  scroll-margin-top: 83px;
+}
 </style>
