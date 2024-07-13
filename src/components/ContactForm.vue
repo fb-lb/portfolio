@@ -59,15 +59,15 @@ onMounted(()=>{
         <form action="#" method="post">
             <div>
                 <label for="fullName">Nom Prénom</label>
-                <input type="text" name="fullName" id="fullName" v-model="fullName">
+                <input type="text" name="fullName" id="fullName" maxlength="40" v-model="fullName">
             </div>
             <div>
                 <label for="email">E-mail</label>
-                <input type="email" name="email" id="email" v-model="email">
+                <input type="email" name="email" id="email" maxlength="40" v-model="email">
             </div>
             <div>
                 <label for="subject">Objet du mail</label>
-                <input type="text" name="subject" id="subject" v-model="subject">
+                <input type="text" name="subject" id="subject" maxlength="40" v-model="subject">
             </div>
             <textarea name="message" id="message" rows="7" cols="60" placeholder="Votre message" maxlength="1000" v-model="message"></textarea>
             <small>Maximum : 1 000 caractères</small>
