@@ -13,9 +13,6 @@
 </template>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@400..700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
-
 #presentation {
     display: flex;
     flex-direction: column;
@@ -33,7 +30,7 @@ img {
     height: 200px;
     object-fit: cover;
     border-radius: 50%;
-    box-shadow: 0 0 1.2rem #F6994B, 0 0 0.2rem #F6994B, 0 0 0.5rem #F6994B;
+    box-shadow: 0 0 1.2rem rgb(242, 135, 73), 0 0 0.2rem rgb(242, 135, 73), 0 0 0.5rem rgb(242, 135, 73);
 }
 
 p {

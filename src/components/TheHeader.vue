@@ -58,9 +58,6 @@ function noActiveLink() {
 </template>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@400..700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
-
 .header {
     background-color: rgb(164, 205, 219);
     display: flex;
@@ -88,7 +85,7 @@ h1 {
     font-family: 'Alkatra', Arial, sans-serif;
     font-size: 2rem;
     margin: 10px 0;
-    text-shadow: 0 0 0.2rem #F28749, 0 0 1rem #F28749;
+    text-shadow: 0 0 0.2rem rgb(242, 135, 73), 0 0 1rem rgb(242, 135, 73);
 }
 
 nav {
@@ -121,6 +118,6 @@ ul li a {
 }
 
 ul li a:hover {
-    text-shadow: 0 0 0.2rem #F28749, 0 0 1rem #F28749;
+    text-shadow: 0 0 0.2rem rgb(242, 135, 73), 0 0 1rem rgb(242, 135, 73);
 }
 </style>

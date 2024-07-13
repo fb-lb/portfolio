@@ -26,15 +26,10 @@ header {
 </style>
 
 <style>
-:root {
-  --header-height: 113px;
-}
+@import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
 
 * {
   scroll-behavior: smooth;
-}
-
-.scroll {
-  scroll-margin-top: calc(var(--header-height) - 30px);
 }
 </style>

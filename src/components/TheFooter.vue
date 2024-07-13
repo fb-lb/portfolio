@@ -7,14 +7,12 @@
             <a href="https://github.com/fb-lb" target="_blank"><img class="icons__github" src="/src/assets/img/socialNetworkIcons.png" alt="Icône de GitHub"></a>
             <a href="https://www.facebook.com/fabien.lubre" target="_blank"><img class="icons__facebook" src="/src/assets/img/socialNetworkIcons.png" alt="Icône de Facebook"></a>
         </div>
-        <small>Mis à jour le <time datetime="2024-07-11">11/07/2024</time></small>
+        <small>Mis à jour le <time datetime="2024-07-13">13/07/2024</time></small>
     </div>
 </template>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
-
-.footer {
+.footer{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -23,7 +21,7 @@
     margin: 0;
 }
 
-div {
+div div {
     display: flex;
     gap: 20px;
     margin: 20px 0;
@@ -48,7 +46,7 @@ img {
 }
 
 .icons__linkedin:hover {
-    background-color: rgb(247, 150, 70);
+    background-color: rgb(242, 135, 73);
 }
 
 .icons__github {

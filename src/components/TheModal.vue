@@ -36,8 +36,6 @@ defineProps({
 </template>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@400..700&display=swap');
-
 .modal {
     position: fixed;
     top: 0;
@@ -65,10 +63,10 @@ defineProps({
     flex-direction: column;
     align-items: center;
     width: 600px;
-    border: 1px solid #F6994B;
+    border: 1px solid rgb(242, 135, 73);
     z-index: 2;
     border-radius: 10px;
-    box-shadow: 0 0 1.2rem #F6994B, 0 0 0.2rem #F6994B, 0 0 0.5rem #F6994B;
+    box-shadow: 0 0 1.2rem rgb(242, 135, 73), 0 0 0.2rem rgb(242, 135, 73), 0 0 0.5rem rgb(242, 135, 73);
     background-color: rgb(204, 214, 223);
 }
 

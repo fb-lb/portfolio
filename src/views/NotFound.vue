@@ -1,7 +1,7 @@
 <script setup></script>
 
 <template>
-    <div class="errorPage">
+    <div>
       <img src="/src/assets/img//erreurPage.png" alt="Dessin orange des contours d'un ordinateur. L'écran fait office de visage avec des croix oranges à la place des yeux et une bouche orange en forme de vaguelette.">
       <p>404</p>
       <p>Oops ! Cette page est introuvable</p>
@@ -10,9 +10,7 @@
 </template>
   
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@400..700&display=swap');
-
-.errorPage {
+div {
   background-color: rgb(204, 214, 223);
   padding-top: 20px;
   display: flex;
@@ -30,7 +28,7 @@ p {
   margin: 0;
   font-weight: bold;
   text-align: center;
-  text-shadow: #F28749 0px 2px, #F28749 -2px 0px, #F28749 2px 0px,#F28749 0px -2px;
+  text-shadow: rgb(242, 135, 73) 0px 2px, rgb(242, 135, 73) -2px 0px, rgb(242, 135, 73) 2px 0px,rgb(242, 135, 73) 0px -2px;
 }
 
 p:first-of-type {
@@ -46,6 +44,5 @@ a {
   text-align: center;
   margin: 50px 0;
 }
-
 </style>
   
