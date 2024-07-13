@@ -67,7 +67,7 @@ onMounted(()=>{
             </div>
             <div>
                 <label for="subject">Objet du mail</label>
-                <input type="text" name="subject" id="subject" maxlength="40" v-model="subject">
+                <input type="text" name="subject" id="subject" maxlength="60" v-model="subject">
             </div>
             <textarea name="message" id="message" rows="7" cols="60" placeholder="Votre message" maxlength="1000" v-model="message"></textarea>
             <small>Maximum : 1 000 caractères</small>
