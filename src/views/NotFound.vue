@@ -28,7 +28,7 @@ p {
   margin: 0;
   font-weight: bold;
   text-align: center;
-  text-shadow: #F28749 0px 2px, #F28749 -2px 0px, #F28749 2px 0px,#F28749 0px -2px;
+  text-shadow: rgb(242, 135, 73) 0px 2px, rgb(242, 135, 73) -2px 0px, rgb(242, 135, 73) 2px 0px,rgb(242, 135, 73) 0px -2px;
 }
 
 p:first-of-type {

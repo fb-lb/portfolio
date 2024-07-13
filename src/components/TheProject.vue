@@ -22,7 +22,7 @@ div {
 }
 
 h2 {
-    border-top: double 4px rgb(247, 150, 70);
+    border-top: double 4px rgb(242, 135, 73);
     padding-top: 25px;
     margin: 50px 0 20px 0;
     font-family: 'Alkatra', Arial, sans-serif;
@@ -40,6 +40,6 @@ img {
 
 img:hover {
     cursor: pointer;
-    box-shadow: 7px 7px 0.2rem rgb(247, 150, 70), 7px 7px 0.7rem rgb(247, 150, 70);
+    box-shadow: 7px 7px 0.2rem rgb(242, 135, 73), 7px 7px 0.7rem rgb(242, 135, 73);
 }
 </style>

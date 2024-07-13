@@ -46,7 +46,7 @@ img {
 }
 
 .icons__linkedin:hover {
-    background-color: rgb(247, 150, 70);
+    background-color: rgb(242, 135, 73);
 }
 
 .icons__github {

@@ -96,7 +96,7 @@ form {
 h2 {
     font-family: 'Alkatra', Arial, sans-serif;
     font-size: 1.7rem;
-    border-top: double 4px rgb(235, 143, 67);
+    border-top: double 4px rgb(242, 135, 73);
     padding-top: 25px;
     margin: 50px 0 20px 0;
     width: 50%;
@@ -133,7 +133,7 @@ p {
     font-size: 1rem;
     font-weight: bold;
     margin: 0;
-    color: darkred;
+    color: rgb(139, 0, 0);
 }
 
 button {
